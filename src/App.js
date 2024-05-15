@@ -51,7 +51,7 @@ function App() {
 
   const handleEnterSearch = async (e) => {
     if(e.key === 'Enter') {
-      const res = await axios.get(`http://localhost:3000/fltr`);
+      const res = await axios.get(`https://backend-d7ys.onrender.com/fltr`);
 
       console.log(res);
       // setsearchName(search);
@@ -63,7 +63,7 @@ function App() {
 
 
   const handleEnterSearch2 = async () => {
-      const res = await axios.get(`http://localhost:3000/fltr`);
+      const res = await axios.get(`https://backend-d7ys.onrender.com/fltr`);
 
       console.log(res);
       // setsearchName(search);
@@ -123,7 +123,7 @@ function App() {
 
   const modalClick = async (itemId) => {
     setLgShow(true); 
-    const res = await axios.get(`http://localhost:3000/findId/${itemId}`);
+    const res = await axios.get(`https://backend-d7ys.onrender.com/findId/${itemId}`);
     // console.log(res);
     setName(res.data.Name);  
     setAnnual_Percentage(res.data.Annual_Percentage);
@@ -296,7 +296,7 @@ function App() {
   // }
 
   const apply = async () => {
-    const res = await axios.get(`http://localhost:3000/filter/${Education}/${marks}/${cat}/${sport}/${Dis}/${inc}/${sex}/${service}`);
+    const res = await axios.get(`https://backend-d7ys.onrender.com/filter/${Education}/${marks}/${cat}/${sport}/${Dis}/${inc}/${sex}/${service}`);
 
     console.log(res);
       // setsearchName(search);
