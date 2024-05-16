@@ -326,7 +326,7 @@ function App() {
           <input 
             type='text' 
             className='input' 
-            placeholder='Search Images here...' 
+            placeholder='Search here...' 
             onChange={handleSearchChange}
             onKeyPress={handleEnterSearch}
             value={search} 
