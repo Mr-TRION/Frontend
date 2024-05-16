@@ -321,20 +321,7 @@ function App() {
 
   return (
     <div className="App">
-    {/* <Navbar id="nav" className="bg-body-tertiary">
-          <Container>
-            <Navbar.Brand id="title" href="#home">
-              {/* <img
-                alt=""
-                src="/img/logo.svg"
-                width="30"
-                height="30"
-                className="d-inline-block align-top"
-              />{' '} */}
-              Scholarship HUB
-            </Navbar.Brand>
-          </Container>
-        </Navbar> */}
+    
         <div className="search">
           <input 
             type='text' 
