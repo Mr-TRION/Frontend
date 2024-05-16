@@ -299,6 +299,7 @@ function App() {
     const res = await axios.get(`https://backend-d7ys.onrender.com/filter/${Education}/${marks}/${cat}/${sport}/${Dis}/${inc}/${sex}/${service}`);
 
     console.log(res);
+    setResults([]);
       // setsearchName(search);
     setResults(res.data);
     // console.log(cat);
