@@ -33,9 +33,9 @@ function Home() {
                 <Row>
                 <Col>
                     <h3 id="head1">FIND YOUR <br/> PERFECT SCHOLARSHIP</h3>
-                    <p id="head2">Get ypur Scholarship based on your criteria</p>
+                    <p id="head2">Get your Scholarship based on your criteria</p>
                     <p id="head3">Click the Dataset Button below</p>
-                    <a id="link" href="/">Dataset</a>
+                    <a id="link" href="/">DATASET</a>
                 </Col>
                 <Col>
                     <img id="img" src="https://www.pngall.com/wp-content/uploads/8/Graduation-Scholarship-PNG.png"/>

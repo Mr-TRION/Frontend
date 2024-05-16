@@ -321,7 +321,7 @@ function App() {
 
   return (
     <div className="App">
-    <Navbar id="nav" className="bg-body-tertiary">
+    {/* <Navbar id="nav" className="bg-body-tertiary">
           <Container>
             <Navbar.Brand id="title" href="#home">
               {/* <img
@@ -334,7 +334,7 @@ function App() {
               Scholarship HUB
             </Navbar.Brand>
           </Container>
-        </Navbar>
+        </Navbar> */}
         <div className="search">
           <input 
             type='text' 
