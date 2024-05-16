@@ -10,7 +10,6 @@ import Navbar from 'react-bootstrap/Navbar';
 function App() {
 
   const [results, setResults] = useState([]);
-  const [results2, setResults2] = useState([]);
   const [search, setSearchText] = useState('');
 
   const [Name, setName] = useState('');
@@ -35,7 +34,7 @@ function App() {
   const [rel, setRel] = useState('Hindu');
   const [sport, setSport] = useState('No');
   
-  let baseUrl = "https://frontend-1-vzy3.onrender.com"
+
 
   //setting
   const [found, setFound] = useState(0);
@@ -52,7 +51,7 @@ function App() {
 
   const handleEnterSearch = async (e) => {
     if(e.key === 'Enter') {
-      const res = await axios.get(`https://frontend-1-vzy3.onrender.com/fltr`);
+      const res = await axios.get(`https://backend-d7ys.onrender.com/fltr`);
 
       console.log(res);
       // setsearchName(search);
@@ -64,7 +63,7 @@ function App() {
 
 
   const handleEnterSearch2 = async () => {
-      const res = await axios.get(`https://frontend-1-vzy3.onrender.com/fltr`);
+      const res = await axios.get(`https://backend-d7ys.onrender.com/fltr`);
 
       console.log(res);
       // setsearchName(search);
@@ -72,7 +71,6 @@ function App() {
       // setFound(res.data.length);
       // setSearchText('');
   }
-  
 
   // async function handleEnterSearch(e){
   //   if(e.key === 'Enter') {
@@ -125,7 +123,7 @@ function App() {
 
   const modalClick = async (itemId) => {
     setLgShow(true); 
-    const res = await axios.get(`https://frontend-1-vzy3.onrender.com/findId/${itemId}`);
+    const res = await axios.get(`https://backend-d7ys.onrender.com/findId/${itemId}`);
     // console.log(res);
     setName(res.data.Name);  
     setAnnual_Percentage(res.data.Annual_Percentage);
@@ -296,14 +294,13 @@ function App() {
   //     </div>
   //   );
   // }
-  let show = false;
+
   const apply = async () => {
-    const res = await axios.get(`https://frontend-1-vzy3.onrender.com/filter/${Education}/${marks}/${cat}/${sport}/${Dis}/${inc}/${sex}/${service}`);
+    const res = await axios.get(`https://backend-d7ys.onrender.com/filter/${Education}/${marks}/${cat}/${sport}/${Dis}/${inc}/${sex}/${service}`);
 
     console.log(res);
       // setsearchName(search);
     setResults(res.data);
-    show = true;
     // console.log(cat);
     // console.log(Dis);
     // console.log(rel);
@@ -317,9 +314,10 @@ function App() {
   }
 
 
+
   useEffect(() => {
     setTimeout(handleEnterSearch2, 500);
-  }, []);
+  });
 
   return (
     <div className="App">
@@ -341,7 +339,7 @@ function App() {
           <input 
             type='text' 
             className='input' 
-            placeholder='Search here...' 
+            placeholder='Search Images here...' 
             onChange={handleSearchChange}
             onKeyPress={handleEnterSearch}
             value={search} 
@@ -493,46 +491,6 @@ function App() {
           }
         </div>
 
-        <div className="data">
-          {
-            results.map((item) => {
-              return  (
-                  <div id="data-list" onClick={() => modalClick(item._id)} key={item.id}>
-                    {item.Name}
-                    <hr />
-                    {item.Community}
-                  </div>
-              )
-            })
-          }
-        </div>
-
-{/* 
-        <div className="data">
-          
-          { show ?
-            results2.map((item) => {
-            return  (
-                <div id="data-list" onClick={() => modalClick(item._id)} key={item.id}>
-                  {item.Name}
-                  <hr />
-                  {item.Community}
-                </div>
-            )
-          }) : 
-            results.map((item) => {
-            return  (
-                <div id="data-list" onClick={() => modalClick(item._id)} key={item.id}>
-                  {item.Name}
-                  <hr />
-                  {item.Community}
-                </div>
-            )
-          })
-
-          }
-        
-      </div> */}
 
          
     </div>
