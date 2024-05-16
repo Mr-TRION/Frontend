@@ -317,7 +317,7 @@ function App() {
 
   useEffect(() => {
     setTimeout(handleEnterSearch2, 500);
-  });
+  }, []);
 
   return (
     <div className="App">
