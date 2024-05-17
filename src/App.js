@@ -458,7 +458,7 @@ function App() {
             <p>Exservice_men - {Exservice_men}</p>
             <p>Outcome - {Outcome}</p>
             <p>Religion - {Religion}</p>
-            <a targer="_blank" to="https://google.com">Apply Here</a>
+            <a id="link" targer="_blank" to="https://google.com">Apply Here</a>
           </Modal.Body>
         </Modal>
 
