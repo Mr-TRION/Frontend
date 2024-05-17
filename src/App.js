@@ -447,8 +447,7 @@ function App() {
           <Modal.Body>
             <h5>{Name}</h5>
             <hr />
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacinia tellus ac arcu scelerisque, in imperdiet nulla posuere. Quisque quam eros, aliquam in consequat eget, congue sed ex. Cras est diam, feugiat convallis molestie eu, finibus non nulla. Etiam vitae tellus condimentum, ornare nibh quis, dignissim tortor. Duis non egestas sem. Maecenas sit amet dui rhoncus, mattis nisi eget, suscipit felis. Integer ultricies arcu non velit egestas, sit amet ornare erat placerat. Pellentesque finibus velit lacus, et ornare lectus vulputate et. Cras lobortis tincidunt justo, non tempor lectus aliquam at. Nullam condimentum tellus eu ipsum ornare aliquet. Duis nec laoreet metus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur tempor lectus tellus. </p>
-
+            <p>A scholarship is a coveted opportunity that provides financial assistance to deserving students, empowering them to pursue their educational aspirations. These awards are often merit-based, recognizing academic excellence, leadership qualities, and extracurricular involvement. Additionally, scholarships can also be need-based, catering to students facing financial constraints. Beyond financial support, scholarships offer recognition and validation of students' hard work and dedication. They open doors to higher education, enabling individuals to access opportunities they might not otherwise afford. By investing in students' futures, scholarships foster talent development and contribute to the growth of diverse, skilled professionals who will make meaningful contributions to society.</p>
             <p>Education Qualification - {Education_Qualification}</p>
             <p>Disability - {Disability}</p>
             <p>Gender - {Gender}</p>
