@@ -51,13 +51,12 @@ function App() {
 
   const handleEnterSearch = async (e) => {
     if(e.key === 'Enter') {
-      const res = await axios.get(`https://backend-d7ys.onrender.com/fltr`);
+      const res = await axios.get(`https://backend-d7ys.onrender.com/search/${search}`);
 
       console.log(res);
-      // setsearchName(search);
+
       setResults(res.data);
-      // setFound(res.data.length);
-      // setSearchText('');
+      
     } 
   }
 
@@ -440,7 +439,7 @@ function App() {
         >
           <Modal.Header closeButton>
             <Modal.Title id="example-modal-sizes-title-lg">
-              <h3>Modal</h3>
+              <h3>Details</h3>
             </Modal.Title>
           </Modal.Header>
           
@@ -463,6 +462,7 @@ function App() {
         </Modal>
 
 
+        {results.length > 0 ? 
         <div className="data">
           {
             results.map((item) => {
@@ -475,7 +475,11 @@ function App() {
               )
             })
           }
+        </div> :
+        <div id="no"> 
+          <h4>No Data found</h4>
         </div>
+        }
 
 
          
