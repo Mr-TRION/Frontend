@@ -23,6 +23,7 @@ function App() {
   const [Outcome, setOutcome] = useState('');
   const [Religion, setReligion] = useState('');
   const [Sports, setSports] = useState('');
+  const [Links, setLinks] = useState('');
 
   const [marks, setMarks] = useState('90-100');
   const [cat, setCat] = useState('General');
@@ -135,6 +136,7 @@ function App() {
     setOutcome(res.data.Outcome);
     setReligion(res.data.Religion);
     setSports(res.data.Sports);
+    setLinks(res.data.Link);
   }
 
   const modalClick2 = async (itemId) => {
@@ -457,7 +459,7 @@ function App() {
             <p>Exservice_men - {Exservice_men}</p>
             <p>Outcome - {Outcome}</p>
             <p>Religion - {Religion}</p>
-            <a id="link" target="_blank" href={'https://www.google.com/search?q='+ Name}>Apply Here</a>
+            <a id="link" target="_blank" href={Links}>Apply Here</a>
           </Modal.Body>
         </Modal>
 
